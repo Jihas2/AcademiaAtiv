@@ -21,14 +21,6 @@
 </head>
 <body>
 
-    <!-- Loading Screen -->
-    <div class="loader" id="loader">
-        <div class="loader-content">
-            <div class="loader-logo">ATIV</div>
-            <div class="loader-bar"><div class="loader-progress"></div></div>
-        </div>
-    </div>
-
     <!-- Scroll Progress Bar -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
@@ -566,73 +558,6 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">Depoimentos</span>
-                <h2 class="section-title">O que nossos <span class="text-gradient">alunos dizem</span></h2>
-            </div>
-            <div class="testimonials-slider" id="testimonialsSlider">
-                <div class="testimonial-card active">
-                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-                    <p class="testimonial-text">
-                        "A Ativ mudou completamente minha rotina. O ambiente é incrível, os professores são extremamente atenciosos e os resultados aparecem rápido. Indico de olhos fechados!"
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Cliente">
-                        <div>
-                            <h4>Mariana Silva</h4>
-                            <span>Aluna há 3 anos</span>
-                            <div class="rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-                    <p class="testimonial-text">
-                        "Comecei sem nenhuma experiência e fui muito bem acolhido. Hoje treino 5x por semana e nunca me senti tão bem. Equipamentos top e ambiente familiar."
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Cliente">
-                        <div>
-                            <h4>Rafael Mendes</h4>
-                            <span>Aluno há 2 anos</span>
-                            <div class="rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-                    <p class="testimonial-text">
-                        "O yoga aqui é maravilhoso! A Leci é uma instrutora incrível e o estúdio é super tranquilo. Voltei a ter qualidade de vida depois de me matricular."
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Cliente">
-                        <div>
-                            <h4>Camila Oliveira</h4>
-                            <span>Aluna há 1 ano</span>
-                            <div class="rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-controls">
-                <button class="slider-btn" id="prevTestimonial" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-                <div class="slider-dots" id="sliderDots"></div>
-                <button class="slider-btn" id="nextTestimonial" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </section>
-
     <!-- FAQ -->
     <section class="faq">
         <div class="container">
@@ -883,7 +808,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>© 2026 Ativ Academia • Academia Olimpo LTDA • CNPJ: 37.116.937/0001-37</p>
+                <p>© <span id="currentYear">2026</span> Ativ Academia • Academia Olimpo LTDA • CNPJ: 37.116.937/0001-37</p>
                 <p>Desenvolvido com <i class="fas fa-heart"></i> em Foz do Iguaçu</p>
             </div>
         </div>

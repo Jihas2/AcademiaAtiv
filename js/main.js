@@ -26,18 +26,6 @@
     }
 
     // ============================================
-    // LOADER
-    // ============================================
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            const loader = document.getElementById('loader');
-            if (loader) loader.classList.add('hidden');
-            // Remove do DOM após animação para liberar foco/cliques
-            if (loader) setTimeout(() => loader.remove(), 700);
-        }, 1500);
-    });
-
-    // ============================================
     // SCROLL HANDLERS UNIFICADOS (com throttle)
     // ============================================
     const scrollProgress = document.getElementById('scrollProgress');
@@ -129,6 +117,27 @@
                 document.body.style.overflow = '';
             }
         });
+
+        // Fecha menu ao clicar fora dele (mobile)
+        document.addEventListener('click', (e) => {
+            if (!navMenu.classList.contains('active')) return;
+            if (navMenu.contains(e.target) || navToggle.contains(e.target)) return;
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        });
+
+        // Fecha menu com ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+                navToggle.focus();
+            }
+        });
     }
 
     // ============================================
@@ -192,64 +201,18 @@
     }
 
     // ============================================
-    // TESTIMONIALS SLIDER
-    // ============================================
-    const slider = document.getElementById('testimonialsSlider');
-    if (slider) {
-        const cards = slider.querySelectorAll('.testimonial-card');
-        const prevBtn = document.getElementById('prevTestimonial');
-        const nextBtn = document.getElementById('nextTestimonial');
-        const dotsContainer = document.getElementById('sliderDots');
-        let current = 0;
-        let autoplayInterval;
-
-        if (cards.length > 0 && dotsContainer) {
-            cards.forEach((_, i) => {
-                const dot = document.createElement('button');
-                dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
-                dot.setAttribute('aria-label', `Depoimento ${i + 1}`);
-                dot.addEventListener('click', () => goTo(i));
-                dotsContainer.appendChild(dot);
-            });
-            const dots = dotsContainer.querySelectorAll('.slider-dot');
-
-            function goTo(index) {
-                cards[current].classList.remove('active');
-                dots[current].classList.remove('active');
-                current = (index + cards.length) % cards.length;
-                cards[current].classList.add('active');
-                dots[current].classList.add('active');
-                resetAutoplay();
-            }
-            function next() { goTo(current + 1); }
-            function prev() { goTo(current - 1); }
-
-            if (nextBtn) nextBtn.addEventListener('click', next);
-            if (prevBtn) prevBtn.addEventListener('click', prev);
-
-            function startAutoplay() { autoplayInterval = setInterval(next, 6000); }
-            function resetAutoplay() { clearInterval(autoplayInterval); startAutoplay(); }
-            startAutoplay();
-            slider.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
-            slider.addEventListener('mouseleave', startAutoplay);
-
-            // Suporte a swipe touch (mobile)
-            let touchStartX = 0;
-            slider.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
-            slider.addEventListener('touchend', (e) => {
-                const diff = touchStartX - e.changedTouches[0].clientX;
-                if (Math.abs(diff) > 50) diff > 0 ? next() : prev();
-            }, { passive: true });
-        }
-    }
-
-    // ============================================
     // FAQ ACCORDION
     // ============================================
-    document.querySelectorAll('.faq-item').forEach(item => {
+    document.querySelectorAll('.faq-item').forEach((item, idx) => {
         const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
         if (!question) return;
+
+        // Liga aria-controls -> id da resposta
+        if (answer && !answer.id) answer.id = `faq-answer-${idx}`;
+        if (answer) question.setAttribute('aria-controls', answer.id);
         question.setAttribute('aria-expanded', 'false');
+
         question.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
             document.querySelectorAll('.faq-item').forEach(i => {
@@ -409,5 +372,11 @@
         // Não aplicar nas imagens above-the-fold (hero)
         if (!img.closest('.hero')) img.setAttribute('loading', 'lazy');
     });
+
+    // ============================================
+    // ANO DINÂMICO NO FOOTER
+    // ============================================
+    const yearEl = document.getElementById('currentYear');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 })();
