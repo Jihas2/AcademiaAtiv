@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ativ Academia - A estrutura mais moderna de Foz do Iguaçu. Musculação, Yoga, Dança, Cardio e muito mais. A vida acontece em movimento.">
+    <meta name="keywords" content="academia, foz do iguaçu, musculação, yoga, fitness, treino, saúde">
+    <meta name="theme-color" content="#00ff88">
+    <meta property="og:title" content="Ativ Academia | A vida acontece em movimento">
+    <meta property="og:description" content="A estrutura mais moderna de Foz do Iguaçu. Musculação, Yoga, Cardio, Dança e Funcional.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <title>Ativ Academia | A vida acontece em movimento</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0a0a'/%3E%3Ctext x='50' y='68' font-family='Arial Black' font-size='52' font-weight='900' text-anchor='middle' fill='%2300ff88'%3EA%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">ATIV</div>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/554533777654?text=Olá!%20Vim%20pelo%20site%20da%20Ativ%20Academia" target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Fale conosco pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="pulse"></span>
+    </a>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">ATIV</span>
+                <span class="logo-dot"></span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#modalidades" class="nav-link">Modalidades</a></li>
+                <li><a href="#estrutura" class="nav-link">Estrutura</a></li>
+                <li><a href="#planos" class="nav-link">Planos</a></li>
+                <li><a href="#equipe" class="nav-link">Equipe</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#planos" class="btn btn-primary nav-cta">Matricule-se</a>
+                <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menu de navegação">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Academia" class="hero-image">
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-tag" data-aos="fade-up">
+                    <i class="fas fa-bolt"></i> Foz do Iguaçu • Desde 2020
+                </span>
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                    A VIDA <br>
+                    <span class="text-gradient">ACONTECE EM</span><br>
+                    MOVIMENTO
+                </h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    A estrutura mais moderna de Foz do Iguaçu. Equipamentos de ponta, instrutores especializados e um ambiente feito para você superar seus limites.
+                </p>
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#planos" class="btn btn-primary btn-large">
+                        <span>Comece Agora</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#modalidades" class="btn btn-outline btn-large">
+                        <i class="fas fa-play"></i>
+                        <span>Conheça nossas aulas</span>
+                    </a>
+                </div>
+                <div class="hero-features" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Sem taxa de matrícula</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Avaliação física inclusa</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Estacionamento gratuito</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Role para descobrir</span>
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="fade-up">
+                    <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="stat-number" data-count="6">0</div>
+                    <div class="stat-label">Anos de experiência</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-number" data-count="1500">0</div>
+                    <div class="stat-label">Alunos ativos</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon"><i class="fas fa-dumbbell"></i></div>
+                    <div class="stat-number" data-count="120">0</div>
+                    <div class="stat-label">Equipamentos modernos</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon"><i class="fas fa-medal"></i></div>
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Instrutores especialistas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images" data-aos="fade-right">
+                    <div class="about-img-main">
+                        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Academia interior">
+                    </div>
+                    <div class="about-img-secondary">
+                        <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Treino">
+                    </div>
+                    <div class="about-badge">
+                        <span class="badge-number">+6</span>
+                        <span class="badge-text">Anos transformando vidas</span>
+                    </div>
+                </div>
+                <div class="about-content" data-aos="fade-left">
+                    <span class="section-tag">Nossa História</span>
+                    <h2 class="section-title">Mais do que uma academia,<br><span class="text-gradient">uma família.</span></h2>
+                    <p class="about-text">
+                        A <strong>Ativ Academia</strong> nasceu em maio de 2020, em meio à pandemia, do sonho da família Leci, Marcelo, Luan e Paulo de criar um espaço diferente de tudo que existia em Foz do Iguaçu.
+                    </p>
+                    <p class="about-text">
+                        Cansados de academias frias e impessoais, decidimos construir um ambiente onde cada aluno é tratado como parte da nossa família — com equipamentos de ponta, atendimento humano e treinos verdadeiramente personalizados.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                            <div>
+                                <h4>Ambiente Acolhedor</h4>
+                                <p>Espaço pensado para todas as idades e níveis</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-trophy"></i></div>
+                            <div>
+                                <h4>Resultados Reais</h4>
+                                <p>Acompanhamento contínuo e profissional</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contato" class="btn btn-primary">
+                        Visite nossa academia <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modalidades Section -->
+    <section class="modalidades" id="modalidades">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Modalidades</span>
+                <h2 class="section-title">Encontre o treino <span class="text-gradient">perfeito para você</span></h2>
+                <p class="section-subtitle">Diversas modalidades inclusas em todos os planos mensais ou superiores.</p>
+            </div>
+            <div class="modalidades-grid">
+                <div class="modalidade-card" data-aos="fade-up">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Musculação">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-dumbbell"></i></div>
+                        <h3>Musculação</h3>
+                        <p>Equipamentos modernos para todos os níveis, com acompanhamento personalizado.</p>
+                        <a href="#contato" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="modalidade-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Yoga">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-spa"></i></div>
+                        <h3>Yoga</h3>
+                        <p>Aulas todas as terças e quintas. Equilibre corpo e mente em um ambiente tranquilo.</p>
+                        <a href="#contato" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="modalidade-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cardio">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-heartbeat"></i></div>
+                        <h3>Cardio</h3>
+                        <p>Esteiras, bikes e elípticos de última geração para queimar calorias e ganhar resistência.</p>
+                        <a href="#contato" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="modalidade-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dança">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-music"></i></div>
+                        <h3>Dança Fitness</h3>
+                        <p>Diversão garantida! Queime calorias dançando ritmos variados com nossos instrutores.</p>
+                        <a href="#contato" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="modalidade-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Circuito">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-running"></i></div>
+                        <h3>Circuito Funcional</h3>
+                        <p>Treinos intensos e dinâmicos para condicionamento, força e perda de peso.</p>
+                        <a href="#contato" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="modalidade-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Avaliação">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-clipboard-check"></i></div>
+                        <h3>Avaliação Física</h3>
+                        <p>Avaliações completas com profissionais para planejar a melhor rotina para você.</p>
+                        <a href="#contato" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais / Features -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Diferenciais</span>
+                <h2 class="section-title">Por que escolher a <span class="text-gradient">Ativ?</span></h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="zoom-in">
+                    <div class="feature-card-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>Tecnologia de Ponta</h3>
+                    <p>Equipamentos importados das melhores marcas do mercado, sempre revisados e atualizados.</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="feature-card-icon"><i class="fas fa-user-graduate"></i></div>
+                    <h3>Profissionais Qualificados</h3>
+                    <p>Equipe formada por educadores físicos com pós-graduação e especializações.</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-card-icon"><i class="fas fa-snowflake"></i></div>
+                    <h3>Ambiente Climatizado</h3>
+                    <p>Espaço amplo, arejado e climatizado para o seu máximo conforto durante os treinos.</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="feature-card-icon"><i class="fas fa-shower"></i></div>
+                    <h3>Vestiários Completos</h3>
+                    <p>Vestiários femininos e masculinos com chuveiros, armários e área de descanso.</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="feature-card-icon"><i class="fas fa-car"></i></div>
+                    <h3>Estacionamento Gratuito</h3>
+                    <p>Estacionamento próprio e seguro, sem custo adicional para alunos.</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="feature-card-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>App Exclusivo</h3>
+                    <p>Acesse sua ficha de treino, agende avaliações e acompanhe sua evolução pelo app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estrutura / Galeria -->
+    <section class="gallery" id="estrutura">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Nossa Estrutura</span>
+                <h2 class="section-title">Conheça nosso <span class="text-gradient">espaço</span></h2>
+                <p class="section-subtitle">Mais de 1.000m² pensados para o seu treino perfeito.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item-large" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Área principal">
+                    <div class="gallery-info">
+                        <h4>Área de Musculação</h4>
+                        <p>500m² com equipamentos premium</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cardio">
+                    <div class="gallery-info">
+                        <h4>Cardio</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Yoga studio">
+                    <div class="gallery-info">
+                        <h4>Studio Yoga</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1591291621164-2c6367723315?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Funcional">
+                    <div class="gallery-info">
+                        <h4>Área Funcional</h4>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item-large" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1623874514711-0f321325f318?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Recepção">
+                    <div class="gallery-info">
+                        <h4>Recepção</h4>
+                        <p>Atendimento exclusivo e personalizado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos Section -->
+    <section class="planos" id="planos">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Planos & Preços</span>
+                <h2 class="section-title">Escolha seu <span class="text-gradient">plano ideal</span></h2>
+                <p class="section-subtitle">Todos os planos mensais ou superiores incluem acesso ilimitado a TODAS as modalidades.</p>
+            </div>
+
+            <div class="planos-grid">
+                <div class="plano-card" data-aos="fade-up">
+                    <div class="plano-header">
+                        <h3>Diária</h3>
+                        <p>Experimente nossa academia</p>
+                    </div>
+                    <div class="plano-price">
+                        <span class="currency">R$</span>
+                        <span class="value">30</span>
+                        <span class="period">/dia</span>
+                    </div>
+                    <ul class="plano-features">
+                        <li><i class="fas fa-check"></i> Acesso à musculação</li>
+                        <li><i class="fas fa-check"></i> Acesso ao cardio</li>
+                        <li><i class="fas fa-check"></i> Vestiário completo</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Aulas coletivas</li>
+                    </ul>
+                    <a href="https://wa.me/554533777654?text=Olá!%20Quero%20fazer%20uma%20diária" target="_blank" rel="noopener" class="btn btn-outline btn-block">Quero esse plano</a>
+                </div>
+
+                <div class="plano-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="plano-header">
+                        <h3>Mensal</h3>
+                        <p>Para começar com tudo</p>
+                    </div>
+                    <div class="plano-price">
+                        <span class="currency">R$</span>
+                        <span class="value">239</span>
+                        <span class="period">/mês</span>
+                    </div>
+                    <ul class="plano-features">
+                        <li><i class="fas fa-check"></i> Acesso ilimitado</li>
+                        <li><i class="fas fa-check"></i> Todas as modalidades</li>
+                        <li><i class="fas fa-check"></i> Avaliação física inclusa</li>
+                        <li><i class="fas fa-check"></i> Yoga, Dança, Cardio</li>
+                    </ul>
+                    <a href="https://wa.me/554533777654?text=Olá!%20Quero%20o%20plano%20mensal" target="_blank" rel="noopener" class="btn btn-outline btn-block">Quero esse plano</a>
+                </div>
+
+                <div class="plano-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="plano-header">
+                        <h3>Trimestral</h3>
+                        <p>Economize na rotina</p>
+                    </div>
+                    <div class="plano-price">
+                        <span class="currency">3x</span>
+                        <span class="value">212</span>
+                        <span class="period">/total R$ 636</span>
+                    </div>
+                    <ul class="plano-features">
+                        <li><i class="fas fa-check"></i> Tudo do plano Mensal</li>
+                        <li><i class="fas fa-check"></i> 11% de desconto</li>
+                        <li><i class="fas fa-check"></i> Reavaliação trimestral</li>
+                        <li><i class="fas fa-check"></i> Personal trial inclusos</li>
+                    </ul>
+                    <a href="https://wa.me/554533777654?text=Olá!%20Quero%20o%20plano%20trimestral" target="_blank" rel="noopener" class="btn btn-outline btn-block">Quero esse plano</a>
+                </div>
+
+                <div class="plano-card plano-featured" data-aos="fade-up" data-aos-delay="300">
+                    <div class="plano-badge">Mais Popular</div>
+                    <div class="plano-header">
+                        <h3>Semestral</h3>
+                        <p>O melhor custo-benefício</p>
+                    </div>
+                    <div class="plano-price">
+                        <span class="currency">6x</span>
+                        <span class="value">198</span>
+                        <span class="period">/total R$ 1.188</span>
+                    </div>
+                    <ul class="plano-features">
+                        <li><i class="fas fa-check"></i> Tudo do plano Mensal</li>
+                        <li><i class="fas fa-check"></i> 17% de desconto</li>
+                        <li><i class="fas fa-check"></i> Bioimpedância grátis</li>
+                        <li><i class="fas fa-check"></i> Kit boas-vindas</li>
+                        <li><i class="fas fa-check"></i> Convide um amigo grátis</li>
+                    </ul>
+                    <a href="https://wa.me/554533777654?text=Olá!%20Quero%20o%20plano%20semestral" target="_blank" rel="noopener" class="btn btn-primary btn-block">Quero esse plano</a>
+                </div>
+
+                <div class="plano-card plano-premium" data-aos="fade-up" data-aos-delay="400">
+                    <div class="plano-badge plano-badge-premium">Premium</div>
+                    <div class="plano-header">
+                        <h3>Anual</h3>
+                        <p>Compromisso real com sua saúde</p>
+                    </div>
+                    <div class="plano-price">
+                        <span class="currency">12x</span>
+                        <span class="value">172</span>
+                        <span class="period">/total R$ 2.064</span>
+                    </div>
+                    <ul class="plano-features">
+                        <li><i class="fas fa-check"></i> Tudo do plano Mensal</li>
+                        <li><i class="fas fa-check"></i> 28% de desconto</li>
+                        <li><i class="fas fa-check"></i> Personal trainer 4x/mês</li>
+                        <li><i class="fas fa-check"></i> Avaliações ilimitadas</li>
+                        <li><i class="fas fa-check"></i> Kit premium exclusivo</li>
+                        <li><i class="fas fa-check"></i> 2 amigos grátis por mês</li>
+                    </ul>
+                    <a href="https://wa.me/554533777654?text=Olá!%20Quero%20o%20plano%20anual" target="_blank" rel="noopener" class="btn btn-outline btn-block">Quero esse plano</a>
+                </div>
+            </div>
+
+            <div class="planos-note" data-aos="fade-up">
+                <i class="fas fa-shield-alt"></i>
+                <p>Garantia de 7 dias: experimente sem compromisso. Se não amar, devolvemos seu dinheiro.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipe Section -->
+    <section class="equipe" id="equipe">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Nossa Equipe</span>
+                <h2 class="section-title">Conheça os <span class="text-gradient">profissionais</span> que vão te transformar</h2>
+            </div>
+            <div class="equipe-grid">
+                <div class="equipe-card" data-aos="fade-up">
+                    <div class="equipe-photo">
+                        <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Paulo">
+                        <div class="equipe-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="equipe-info">
+                        <h3>Paulo</h3>
+                        <span>Sócio-Fundador & Personal Trainer</span>
+                        <p>Especialista em hipertrofia e emagrecimento, com mais de 15 anos de experiência.</p>
+                    </div>
+                </div>
+
+                <div class="equipe-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="equipe-photo">
+                        <img src="https://images.unsplash.com/photo-1583468982228-19f19164aee2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Marcelo">
+                        <div class="equipe-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="equipe-info">
+                        <h3>Marcelo</h3>
+                        <span>Sócio-Fundador & Coach</span>
+                        <p>Especialista em treinamento funcional e preparação física para atletas.</p>
+                    </div>
+                </div>
+
+                <div class="equipe-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="equipe-photo">
+                        <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Leci">
+                        <div class="equipe-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="equipe-info">
+                        <h3>Leci</h3>
+                        <span>Sócia-Fundadora & Yoga</span>
+                        <p>Instrutora de yoga certificada e responsável pela área de bem-estar e mindfulness.</p>
+                    </div>
+                </div>
+
+                <div class="equipe-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="equipe-photo">
+                        <img src="https://images.unsplash.com/photo-1605296867424-35fc25c9212a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Luan">
+                        <div class="equipe-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="equipe-info">
+                        <h3>Luan</h3>
+                        <span>Sócio-Fundador & Personal</span>
+                        <p>Especialista em cross training e treinos de alta intensidade. Foco em resultado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Depoimentos</span>
+                <h2 class="section-title">O que nossos <span class="text-gradient">alunos dizem</span></h2>
+            </div>
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">
+                        "A Ativ mudou completamente minha rotina. O ambiente é incrível, os professores são extremamente atenciosos e os resultados aparecem rápido. Indico de olhos fechados!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Cliente">
+                        <div>
+                            <h4>Mariana Silva</h4>
+                            <span>Aluna há 3 anos</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">
+                        "Comecei sem nenhuma experiência e fui muito bem acolhido. Hoje treino 5x por semana e nunca me senti tão bem. Equipamentos top e ambiente familiar."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Cliente">
+                        <div>
+                            <h4>Rafael Mendes</h4>
+                            <span>Aluno há 2 anos</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">
+                        "O yoga aqui é maravilhoso! A Leci é uma instrutora incrível e o estúdio é super tranquilo. Voltei a ter qualidade de vida depois de me matricular."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Cliente">
+                        <div>
+                            <h4>Camila Oliveira</h4>
+                            <span>Aluna há 1 ano</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-btn" id="prevTestimonial" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots" id="sliderDots"></div>
+                <button class="slider-btn" id="nextTestimonial" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Perguntas <span class="text-gradient">frequentes</span></h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Quais atividades estão inclusas no plano?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Em todos os planos mensais, trimestrais, semestrais e anuais você tem acesso ilimitado a TODAS as modalidades: musculação, cardio, yoga, dança, circuito funcional e avaliação física inclusa.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="50">
+                    <button class="faq-question">
+                        <span>A academia tem estacionamento?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Temos estacionamento próprio, gratuito e seguro para todos os alunos durante o horário de funcionamento.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-question">
+                        <span>Posso experimentar antes de assinar?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Claro! Oferecemos uma aula experimental gratuita. Também temos plano de diária (R$ 30) caso queira testar nossa estrutura por um dia inteiro.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                    <button class="faq-question">
+                        <span>Quais são os horários de funcionamento?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Segunda a Sexta:</strong> 6h às 23h<br><strong>Sábados:</strong> 6h às 18h<br><strong>Domingos:</strong> 8h às 12h</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-question">
+                        <span>Existe taxa de matrícula ou adesão?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Não cobramos taxa de matrícula ou adesão. Você paga apenas o valor do plano escolhido. Simples assim!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+                    <button class="faq-question">
+                        <span>Posso cancelar a qualquer momento?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. Nos planos mensais não há fidelidade. Nos planos trimestrais, semestrais e anuais existe um vínculo, mas oferecemos garantia de 7 dias para reembolso total caso não esteja satisfeito.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Location -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <div class="contato-grid">
+                <div class="contato-info" data-aos="fade-right">
+                    <span class="section-tag">Fale Conosco</span>
+                    <h2 class="section-title">Venha nos <span class="text-gradient">visitar!</span></h2>
+                    <p class="section-subtitle">Estamos prontos para te receber. Agende uma visita ou entre em contato.</p>
+
+                    <div class="contato-items">
+                        <div class="contato-item">
+                            <div class="contato-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Endereço</h4>
+                                <p>Rua Marechal Deodoro da Fonseca, 1700<br>Centro, Foz do Iguaçu - PR<br>CEP: 85851-030</p>
+                            </div>
+                        </div>
+                        <div class="contato-item">
+                            <div class="contato-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4>Telefone</h4>
+                                <p><a href="tel:+554533777654">(45) 3377-7654</a></p>
+                            </div>
+                        </div>
+                        <div class="contato-item">
+                            <div class="contato-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p><a href="https://wa.me/554533777654?text=Olá!%20Vim%20pelo%20site" target="_blank" rel="noopener">(45) 3377-7654</a></p>
+                            </div>
+                        </div>
+                        <div class="contato-item">
+                            <div class="contato-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>E-mail</h4>
+                                <p><a href="mailto:ativ.academiafoz@gmail.com">ativ.academiafoz@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contato-item">
+                            <div class="contato-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4>Horário</h4>
+                                <p>Seg-Sex: 6h às 23h<br>Sáb: 6h às 18h • Dom: 8h às 12h</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contato-social">
+                        <a href="https://instagram.com/ativ.academia" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/academia.ativ" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/554533777654" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="contato-form-wrapper" data-aos="fade-left">
+                    <form class="contato-form" id="contatoForm">
+                        <h3>Agende uma visita</h3>
+                        <p>Preencha o formulário e nossa equipe entrará em contato.</p>
+
+                        <div class="form-group">
+                            <input type="text" id="nome" name="nome" placeholder=" " required autocomplete="name">
+                            <label for="nome">Seu nome completo</label>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder=" " required autocomplete="email">
+                                <label for="email">E-mail</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="telefone" name="telefone" placeholder=" " required autocomplete="tel" maxlength="15">
+                                <label for="telefone">Telefone (WhatsApp)</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <select id="interesse" name="interesse" required>
+                                <option value="" disabled selected hidden></option>
+                                <option value="musculacao">Musculação</option>
+                                <option value="yoga">Yoga</option>
+                                <option value="cardio">Cardio</option>
+                                <option value="danca">Dança Fitness</option>
+                                <option value="circuito">Circuito Funcional</option>
+                                <option value="todos">Tenho interesse em tudo</option>
+                            </select>
+                            <label for="interesse">Modalidade de interesse</label>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="mensagem" name="mensagem" rows="4" placeholder=" "></textarea>
+                            <label for="mensagem">Mensagem (opcional)</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-large">
+                            <span>Enviar mensagem</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="map-wrapper" data-aos="fade-up">
+                <iframe
+                    title="Localização da Ativ Academia"
+                    src="https://maps.google.com/maps?q=Rua+Marechal+Deodoro+da+Fonseca,+1700,+Centro,+Foz+do+Igua%C3%A7u,+PR&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <div class="container">
+            <div class="cta-box" data-aos="zoom-in">
+                <h2>Pronto para <span class="text-gradient">transformar sua vida?</span></h2>
+                <p>Sua primeira aula é por nossa conta. Vem conhecer a Ativ!</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/554533777654?text=Olá!%20Quero%20agendar%20uma%20aula%20experimental" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+                        <i class="fab fa-whatsapp"></i> Agendar aula grátis
+                    </a>
+                    <a href="#planos" class="btn btn-outline btn-large">Ver planos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#home" class="footer-logo">
+                        <span class="logo-text">ATIV</span>
+                        <span class="logo-dot"></span>
+                    </a>
+                    <p>A vida acontece em movimento. Sua transformação começa aqui, em Foz do Iguaçu.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/ativ.academia" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/academia.ativ" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/554533777654" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#modalidades">Modalidades</a></li>
+                        <li><a href="#estrutura">Estrutura</a></li>
+                        <li><a href="#planos">Planos</a></li>
+                        <li><a href="#equipe">Equipe</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Modalidades</h4>
+                    <ul>
+                        <li><a href="#modalidades">Musculação</a></li>
+                        <li><a href="#modalidades">Yoga</a></li>
+                        <li><a href="#modalidades">Cardio</a></li>
+                        <li><a href="#modalidades">Dança Fitness</a></li>
+                        <li><a href="#modalidades">Circuito Funcional</a></li>
+                        <li><a href="#modalidades">Avaliação Física</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Rua Marechal Deodoro da Fonseca, 1700, Centro</li>
+                        <li><i class="fas fa-phone"></i> (45) 3377-7654</li>
+                        <li><i class="fas fa-envelope"></i> ativ.academiafoz@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Ativ Academia • Academia Olimpo LTDA • CNPJ: 37.116.937/0001-37</p>
+                <p>Desenvolvido com <i class="fas fa-heart"></i> em Foz do Iguaçu</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

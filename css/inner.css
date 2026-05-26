@@ -1,0 +1,32 @@
+/* ============================================
+   ATIV ACADEMIA - Inner Pages Stylesheet
+============================================ */
+
+.page-hero {
+    padding: 180px 0 80px;
+    background: var(--color-bg-alt);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.page-hero::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: var(--color-primary);
+    filter: blur(180px);
+    opacity: 0.1;
+    top: -300px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.comparativo {
+    padding: 80px 0;
+}
